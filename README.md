@@ -1,22 +1,38 @@
+
 <div align="center">
   <img src="./dashboard/logo.jpeg" alt="WAGOAT BOT Logo" width="300"/>
-  <h1>🐐 WAGoat-Bot</h1>
+
   <p><b>A powerful, event-driven WhatsApp bot built on <code>@whiskeysockets/baileys</code> with a comprehensive FCA-compatible API layer.</b></p>
 
-  [![GitHub](https://img.shields.io/badge/GitHub-WAGOAT--BOT-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/efkidgamerdev/WAGOAT-BOT)
-  [![Node.js](https://img.shields.io/badge/Node.js-v18%2B-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
-  [![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
-  [![Code Size](https://img.shields.io/github/languages/code-size/efkidgamerdev/WAGOAT-BOT?style=for-the-badge&logo=github&color=blueviolet&logoColor=white)](https://github.com/efkidgamerdev/WAGOAT-BOT)
-  [![Visitors](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fefkidgamerdev%2FWAGOAT-BOT&count_bg=%2379C83D&title_bg=%23555555&icon=github.svg&icon_color=%23E7E7E7&title=visitors&edge_flat=false)](https://github.com/efkidgamerdev/WAGOAT-BOT)
-</div>
 
+<p align="center">
+  <a href="https://nodejs.org/dist/v18.0.0">
+    <img src="https://img.shields.io/badge/Nodejs%20Support-18.x-brightgreen.svg?style=flat-square" alt="Nodejs Support v18.x">
+  </a>
+  <img alt="size" src="https://img.shields.io/github/repo-size/efkidgamerdev/WAGOAT-BOT.svg?style=flat-square&label=size">
+  <img alt="code-version" src="https://img.shields.io/badge/dynamic/json?color=brightgreen&label=code%20version&prefix=v&query=%24.version&url=https://github.com/efkidgamerdev/WAGOAT-BOT/raw/main/package.json&style=flat-square">
+  <img alt="visitors" src="https://visitor-badge.laobi.icu/badge?style=flat-square&page_id=efkidgamerdev.WAGOAT-BOT">
+  <img alt="license" src="https://img.shields.io/badge/license-MIT-green?style=flat-square&color=brightgreen">
+</p>
 
 <br/>
- <div align="center">
+
+  <div align="center">
     <img src="https://readme-typing-svg.demolab.com?font=Transformers&size=80&pause=1000&color=0000FF&center=true&width=1000&height=150&lines=WAGOAT-BOT" alt="Typing SVG - WAGOAT-BOT" />
+  </div>
+
 </div>
 
-  
+<div align="center">
+
+## 📱 Join Our WhatsApp Channel
+
+<a href="https://whatsapp.com/channel/0029VbBMv2IDeON5eOz38p1M" target="_blank">
+  <img src="https://img.shields.io/badge/WhatsApp_Channel-Join_Now-25D366?style=for-the-badge&logo=whatsapp&logoColor=white&labelColor=128C7E" alt="Join WhatsApp Channel"/>
+</a>
+
+</div>
+
 ## 📖 Table of Contents
 - [Features](#features)
 - [Quick Start](#quick-start)
@@ -43,6 +59,8 @@
 - **Flexible Login Methods**: Supports QR Code, Pair Code (Terminal), and Session ID strings.
 - **JSON & MongoDB Support**: Integrated database system out of the box.
 - **Rich Messaging API**: Simplified methods to send images, videos, audio, documents, and interactive messages.
+- **Auto-Update**: Automatically checks and installs updates from GitHub on every startup.
+- **Whitelist Mode**: Restrict bot access to specific users or threads.
 
 <a id="quick-start"></a>
 ## 🚀 Quick Start
@@ -56,7 +74,7 @@ npm install
 npm start
 ```
 
-The bot will print a **Pairing Code** in your terminal. 
+The bot will print a **Pairing Code** in your terminal.  
 To authenticate, open **WhatsApp** on your phone → **Linked Devices** → **Link a Device** → **Link with phone number instead** → Enter the 8-digit code.
 
 ---
@@ -64,74 +82,66 @@ To authenticate, open **WhatsApp** on your phone → **Linked Devices** → **Li
 <a id="authentication-login"></a>
 ## 🔐 Authentication & Login
 
-Goatbot offers multiple ways to authenticate. We highly recommend using the **Session ID** method for cloud deployments (Heroku, Railway, Render, etc.).
+WAGOAT-BOT supports **3 login methods**. Choose one based on your deployment:
 
-<summary><b>Method 1: Pair Code (Terminal) - Default</b></summary>
-<br>
+| Method | Best For | How |
+|--------|----------|-----|
+| 🔢 **Pair Code** | Local / Terminal | Bot prints an 8-digit code → link on WhatsApp |
+| 🆔 **Session ID** | ☁️ Cloud (Heroku, Railway, Render) | Generate a session string → paste in `config.json` |
+| 📷 **QR Code** | Quick local setup | Scan QR in terminal with WhatsApp |
 
-Set your phone number in `config.json`:
-```json
-{
-  "phoneNumber": "8801XXXXXXXXX",
-  "loginMode": "pair"
-}
-```
-Run `npm start` and enter the 8-digit code shown in the terminal into your WhatsApp Linked Devices screen.
+---
 
+### 🔢 Method 1 — Pair Code *(Default)*
 
+> Set `loginMode` to `"pair"` and your phone number in `config.json`, then run `npm start`.  
+> The bot will display an **8-digit code** — enter it in **WhatsApp → Linked Devices → Link with phone number**.
 
-<summary><b>Method 2: Session ID (Recommended for Cloud)</b></summary>
-<br>
+---
 
-### 🔄 Step 1: Fork This Repository
+### 🆔 Method 2 — Session ID *(Recommended for Cloud)*
+
+**Step 1 · Fork & Star the repository**
 
 <div align="center">
   <a href="https://github.com/efkidgamerdev/WAGOAT-BOT/fork">
-    <img src="https://img.shields.io/badge/FORK-WAGOAT_BOT-FF0000?style=for-the-badge&logo=github&logoColor=white&labelColor=black" alt="Fork WAGoat-Bot">
+    <img src="https://img.shields.io/badge/FORK-WAGOAT_BOT-FF0000?style=for-the-badge&logo=github&logoColor=white&labelColor=black" alt="Fork WAGOAT-BOT">
   </a>
-</div>
-
-<div align="center">
+  &nbsp;
   <a href="https://github.com/efkidgamerdev/WAGOAT-BOT">
-    <img src="https://img.shields.io/badge/⭐_Star_on_GitHub-WAGOAT--BOT-FFD700?style=for-the-badge&logo=github&logoColor=white&labelColor=181717" alt="Star on GitHub">
+    <img src="https://img.shields.io/badge/⭐_Star-WAGOAT--BOT-FFD700?style=for-the-badge&logo=github&logoColor=white&labelColor=181717" alt="Star on GitHub">
   </a>
 </div>
 
-### 🔑 Step 2: Generate Your Pairing Code
+**Step 2 · Generate your Session ID**
 
 <div align="center">
-  <a href='https://prime-pair-web-0rst.onrender.com/pair2' target="_blank">
-    <img src='https://img.shields.io/badge/PAIR_1-8A2BE2?style=for-the-badge&logo=render&logoColor=white&labelColor=black' alt='Pair 1'>
+  <a href="https://prime-pair-web-0rst.onrender.com/pair2" target="_blank">
+    <img src="https://img.shields.io/badge/PAIR_SERVER_1-8A2BE2?style=for-the-badge&logo=render&logoColor=white&labelColor=black" alt="Pair Server 1">
   </a>
-  <a href='https://romeobot-paircode.onrender.com/' target="_blank">
-    <img src='https://img.shields.io/badge/PAIR_2-FF4500?style=for-the-badge&logo=render&logoColor=white&labelColor=black' alt='Pair 2'>
+  &nbsp;
+  <a href="https://romeobot-paircode.onrender.com/" target="_blank">
+    <img src="https://img.shields.io/badge/PAIR_SERVER_2-FF4500?style=for-the-badge&logo=render&logoColor=white&labelColor=black" alt="Pair Server 2">
   </a>
 </div>
 
+**Step 3 · Configure & Run**
 
-2. Copy the session string and place it in `config.json`:
-   ```json
-   {
-     "sessionID": "YOUR_SESSION_STRING_HERE",
-     "loginMode": "pair"
-   }
-   ```
-   *Alternatively, set the `SESSION_ID` environment variable.*
-3. Run `npm start`. The bot will automatically import the credentials and clear the `sessionID` field for security.
+> Paste the generated session string into the `sessionID` field in `config.json` (or set the `SESSION_ID` environment variable), then run `npm start`.  
+> The bot will import your credentials automatically and clear the field for security.
 
-
-
-<summary><b>Method 3: QR Code</b></summary>
-<br>
-
-Set your login mode in `config.json`:
 ```json
 {
-  "loginMode": "qr"
+  "sessionID": "YOUR_SESSION_STRING_HERE",
+  "loginMode": "pair"
 }
 ```
-Run `npm start` and scan the QR code that appears in the terminal using WhatsApp.
 
+---
+
+### 📷 Method 3 — QR Code
+
+> Set `loginMode` to `"qr"` in `config.json`, run `npm start`, and **scan the QR code** that appears in your terminal using WhatsApp.
 
 ---
 
@@ -165,6 +175,19 @@ Control your bot's behavior by modifying `config.json`.
 }
 ```
 
+| Key | Description |
+|---|---|
+| `prefix` | The character used to trigger commands (default: `/`) |
+| `adminBot` | Array of WhatsApp JIDs that have bot-admin privileges |
+| `DEV` | Array of WhatsApp JIDs with developer-level access |
+| `loginMode` | `"pair"` (pairing code) or `"qr"` (QR code) |
+| `sessionID` | Paste your session string here for cloud deployments |
+| `database.type` | `"json"` (local files) or `"mongodb"` (MongoDB URI) |
+| `featureBox.adminOnly` | Set to `true` during maintenance to lock out regular users |
+| `featureBox.whitelistMode` | Restrict bot access to `whitelistUIDs` only |
+| `express.port` | Port for the web dashboard (default: `3000`) |
+| `autoUpdate.enable` | Auto-check and install GitHub updates on startup |
+
 > **Pro Tip:** Set `featureBox.adminOnly` to `true` during maintenance to prevent standard users from triggering commands.
 
 ---
@@ -172,10 +195,10 @@ Control your bot's behavior by modifying `config.json`.
 <a id="web-dashboard"></a>
 ## 📊 Web Dashboard
 
-Goatbot includes a built-in, real-time web dashboard running on **Express & Socket.IO**. 
+WAGOAT-BOT includes a built-in, real-time web dashboard powered by **Express & Socket.IO**.
 
-Once the bot starts successfully, you can access the dashboard by visiting:
-**http://localhost:3000/dashboard** (or your server's exposed port if deploying to the cloud).
+Once the bot starts successfully, access the dashboard at:  
+**http://localhost:3000/dashboard** (or your server's exposed port for cloud deployments).
 
 **Dashboard Features:**
 - 📈 Live uptime, memory usage, and ping monitoring
@@ -217,7 +240,7 @@ WAGoat-Bot/
 <a id="writing-commands"></a>
 ### Writing Commands
 
-Create a new JavaScript file in `scripts/cmds/`. 
+Create a new JavaScript file in `scripts/cmds/`.
 
 ```javascript
 "use strict";
@@ -265,7 +288,7 @@ global.GoatBot.onReply.set(info.messageID, {
 **2. Handle the reply in your command:**
 ```javascript
 onReply: async ({ event, Reply, message }) => {
-  if (event.senderID !== Reply.author) return; // Only author can reply
+  if (event.senderID !== Reply.author) return; // Only the original author can reply
   await message.reply(`You chose: ${Reply.data[event.body - 1]}`);
 }
 ```
@@ -310,7 +333,7 @@ module.exports = {
   onStart: async ({ api, event }) => {
     if (event.logMessageType === "log:subscribe") {
       for (const uid of event.participants) {
-         await api.sendMessage(`👋 Welcome!`, event.threadID);
+        await api.sendMessage(`👋 Welcome!`, event.threadID);
       }
     }
   }
@@ -322,7 +345,7 @@ module.exports = {
 | `event.type` | Description |
 |---|---|
 | `message` | Regular chat message |
-| `message_reaction` | User adds/removes a reaction |
+| `message_reaction` | User adds or removes a reaction |
 | `event` | Group participant change |
 | `group_update` | Group name or settings changed |
 
@@ -332,7 +355,7 @@ module.exports = {
 |---|---|
 | `log:subscribe` | User(s) joined a group |
 | `log:unsubscribe` | User(s) left or were removed |
-| `log:thread-admins` | Admin promoted / demoted |
+| `log:thread-admins` | Admin promoted or demoted |
 | `log:thread-name` | Group name was changed |
 
 ---
@@ -340,8 +363,9 @@ module.exports = {
 <a id="api-reference"></a>
 ### API Reference
 
-Goatbot provides a robust `api` object (wrapper around Baileys) to interact with WhatsApp.
+WAGOAT-BOT provides a robust `api` object (a wrapper around Baileys) to interact with WhatsApp.
 
+<details>
 <summary><b>Click to expand API methods</b></summary>
 <br>
 
@@ -415,13 +439,14 @@ Goatbot provides a robust `api` object (wrapper around Baileys) to interact with
 - `api.blockContact(jid)`
 - `api.unblockContact(jid)`
 
+</details>
 
 ---
 
 <a id="command-management"></a>
 ## 🔄 Command Management
 
-You can manage commands and events on-the-fly using the built-in `cmd` and `event` plugins. *(Bot Admin only)*
+Manage commands and events on-the-fly using the built-in `cmd` and `event` plugins. *(Bot Admin only)*
 
 | Usage | Description |
 |---|---|
@@ -432,14 +457,16 @@ You can manage commands and events on-the-fly using the built-in `cmd` and `even
 | `!cmd reload <name>` | Refresh a command to apply code changes |
 
 ---
-<a id="creator-and-maintainer"></a>
-### 🙏 Creator & Maintainer
 
-- **[Romeo Calyx](https://github.com/RomeoCalyx)** - Lead Developer & Maintainer
-- **[efkidgamerdev](https://github.com/efkidgamerdev)** - Co-Developer
+<a id="creator-and-maintainer"></a>
+## 🙏 Creator & Maintainer
+
+- **[Romeo Calyx](https://github.com/RomeoCalyx)** — Lead Developer & Maintainer
+- **[efkidgamerdev](https://github.com/efkidgamerdev)** — Co-Developer
 
 ---
+
 <a id="license"></a>
 ## ⚖️ License
 
-Distributed under the [MIT License](LICENSE). This project with credit **Sheikh Tamim**. Modified by **WAGoat-Bot Team**.
+Distributed under the [MIT License](LICENSE). Originally based on the work of **Sheikh Tamim**, modified and extended by the **WAGOAT-BOT Team**.
