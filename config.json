@@ -1,14 +1,14 @@
 {
-  "prefix": "/",
-  "botName": "WAGOAT-BOT",
+  "prefix": "#",
+  "botName": "Student BotV2 🩶",
   "language": "en",
   "adminBot": [
-    "YOUR_WHATSAPP_ID"
+    "14225552482558"
   ],
   "DEV": [
-    "YOUR_WHATSAPP_ID"
+    "14225552482558"
   ],
-  "phoneNumber": "YOUR_PHONE_NUMBER_WITH_COUNTRY_CODE",
+  "phoneNumber": "+27711631388",
   "loginMode": "pair",
   "sessionID": "",
   "authFolder": "./auth",
